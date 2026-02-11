@@ -22,6 +22,11 @@ Route::get('dashboard', function () {
 // });
 
 // pegando parametro e enviando parametros
-Route::view('/jogos','jogos',['name'=>'Caique']);
+// Route::view('/jogos','jogos',['name'=>'Caique']);
+
+// passando parametros na url
+Route::get('/jogos/{name}', function($name){
+     return view('jogos',['name'=>$name]);
+});
 
 require __DIR__.'/settings.php';
