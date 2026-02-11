@@ -25,7 +25,7 @@ Route::get('dashboard', function () {
 // Route::view('/jogos','jogos',['name'=>'Caique']);
 
 // passando parametros na url
-Route::get('/jogos/{name}', function($name){
+Route::get('/jogos/{name?}', function($name = null){
      return view('jogos',['name'=>$name]);
 });
 
