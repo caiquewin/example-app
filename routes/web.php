@@ -14,6 +14,14 @@ Route::get('dashboard', function () {
     return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/settings.php';
+// Route::view('/jogos','jogos');// retorna uma "view"
 
-Route::view('/jogos','jogos')
+// agora parar retorna um texto
+// Route::get('/jogos', function(){
+//     return "Curso de LARAVEL";
+// });
+
+// pegando parametro e enviando parametros
+Route::view('/jogos','jogos',['name'=>'Caique']);
+
+require __DIR__.'/settings.php';
