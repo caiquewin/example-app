@@ -27,6 +27,6 @@ Route::get('dashboard', function () {
 // passando parametros na url
 Route::get('/jogos/{name?}', function($name = null){
      return view('jogos',['name'=>$name]);
-});
+})->where('name', '[A-Za-z]+');
 
 require __DIR__.'/settings.php';
