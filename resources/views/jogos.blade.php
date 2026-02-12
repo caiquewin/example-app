@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>testando</h1>
-    <p>{{ $idJogo }}</p> 
+    <p>Id do jogo:{{ $idJogo }}</p> 
+    <p>Nome do jogo:{{ $nomeJogo }}</p> 
 </body>
 </html>
